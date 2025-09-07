@@ -1,0 +1,14 @@
+# Default configuration
+sampler:
+  every_nth: 5    # sample every 5th frame
+  max_frames: 500 # cap for speed
+
+scoring:
+  # weights used in simple aggregate scoring
+  w_edge: 0.4
+  w_motion: 0.3
+  w_blur: 0.3
+
+output:
+  save_heatmaps: true
+  save_every_n: 5

@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "VDT Results",
+  "type": "object",
+  "properties": {
+    "video_path": {
+      "type": "string"
+    },
+    "summary": {
+      "type": "object",
+      "properties": {
+        "global_score": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "frames_evaluated": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "flagged_segments": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          }
+        }
+      },
+      "required": [
+        "global_score",
+        "frames_evaluated"
+      ]
+    },
+    "frames": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "index": {
+            "type": "integer"
+          },
+          "score": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          },
+          "explanations": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "heatmap_path": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "index",
+          "score"
+        ]
+      }
+    }
+  },
+  "required": [
+    "video_path",
+    "summary",
+    "frames"
+  ]
+}
