@@ -206,4 +206,11 @@ marimo/_static/
 marimo/_lsp/
 __marimo__/
 
-dataset
+
+dataset/**
+!dataset/unified.dvc
+
+data_extras
+
+# Environment
+vdt_env
