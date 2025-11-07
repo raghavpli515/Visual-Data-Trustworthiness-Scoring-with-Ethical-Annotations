@@ -208,7 +208,7 @@ __marimo__/
 
 
 dataset/**
-!dataset/unified.dvc
+!dataset/classify.dvc
 
 data_extras
 
